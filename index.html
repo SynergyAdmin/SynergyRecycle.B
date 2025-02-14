@@ -3,52 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SynergyRecycle.B - Rivoluzioniamo il riciclo</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Integra Font Awesome per le icone -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>SynergyRecycle.B | Riciclo 4.0 con Blockchain</title>
+    <meta name="description" content="Rivoluzioniamo il riciclo attraverso tecnologia blockchain e sostenibilità ambientale">
+    
+    <!-- Style Base -->
+    <style>
+        :root {
+            --verde-eco: #2ECC71;    /* Verde energia pulita */
+            --blu-tech: #3498DB;      /* Blu tecnologico */
+            --grigio-chiaro: #F8F9FA;
+            --nero-carbonio: #2C3E50;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui;
+            line-height: 1.6;
+            color: var(--nero-carbonio);
+        }
+
+        /* Header Blockchain-style */
+        .header-blockchain {
+            background: linear-gradient(135deg, var(--verde-eco) 0%, var(--blu-tech) 100%);
+            padding: 1rem;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
+        }
+
+        .wallet-connector {
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid white;
+            border-radius: 25px;
+            padding: 0.5rem 1.5rem;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s;
+        }
+
+        /* Sezione Hero Animata */
+        .hero-section {
+            background: url('assets/earth-grid.webp') no-repeat center/cover;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .blockchain-pulse {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--verde-eco) 0%, transparent 70%);
+            animation: pulse 3s infinite;
+            opacity: 0.15;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(0.95); }
+        }
+
+        /* Card ICO/Token con effetto ologramma */
+        .token-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .token-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .token-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                transparent 25%,
+                rgba(46, 204, 113, 0.1) 50%,
+                transparent 75%);
+            animation: hologram 6s infinite linear;
+        }
+
+        @keyframes hologram {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+
+    <!-- Web3 Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
 </head>
 <body>
-    <!-- Header con navigazione -->
-    <header>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#servizi">Servizi</a>
-            <a href="#sostienici">Sostienici</a>
-            <a href="#contatti">Contatti</a>
-            <button id="connectWallet">Connetti Wallet</button>
+    <header class="header-blockchain">
+        <nav class="container flex justify-between items-center">
+            <div class="logo">
+                <img src="assets/logo-srb.webp" alt="SynergyRecycle.B Logo" width="180">
+            </div>
+            <button id="connectWallet" class="wallet-connector text-white">
+                🔗 Connetti Wallet
+            </button>
         </nav>
     </header>
 
-    <!-- Sezione Hero -->
-    <section id="hero">
-        <h1>La nuova piattaforma per aiutarci, ad aiutare il Mondo</h1>
-        <p>Costruiamo esperienze digitali, rivoluzioniamo il modo di fare, distinguiamoci</p>
-        <button>Inizia ora</button>
-        <img src="assets/hero-image.png" alt="Persone che collaborano con tecnologie sostenibili">
-    </section>
+    <main>
+        <!-- Sezione Hero con Animazione Blockchain -->
+        <section class="hero-section">
+            <div class="blockchain-pulse" style="top: 20%; left: 10%"></div>
+            <div class="blockchain-pulse" style="top: 50%; right: 15%"></div>
+            
+            <div class="container hero-content text-center">
+                <h1 class="text-4xl font-bold text-white mb-4">
+                    Ricicla. Guadagna.<br>
+                    <span class="text-verde-eco">Proteggi il Pianeta</span>
+                </h1>
+                <div class="token-card max-w-2xl mx-auto">
+                    <h3 class="text-xl font-semibold mb-4">SRB Token Live</h3>
+                    <div class="crypto-rates flex justify-between">
+                        <div>
+                            <div class="text-sm">Prezzo Attuale</div>
+                            <div class="text-2xl font-bold">$0.00215</div>
+                        </div>
+                        <div>
+                            <div class="text-sm">Transazioni ECO</div>
+                            <div class="text-2xl font-bold">12.4K</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Altre sezioni (Strategia, Valori, Team, ecc.) -->
-    <!-- ... -->
+        <!-- Sezione Funzionalità Blockchain -->
+        <section class="py-16 bg-grigio-chiaro">
+            <div class="container grid md:grid-cols-3 gap-8">
+                <div class="token-card p-6">
+                    <img src="assets/icon-recycle.webp" alt="Riciclo Tokenizzato" class="w-20 mb-4">
+                    <h3 class="text-xl font-bold mb-2">Riciclo 4.0</h3>
+                    <p>Ogni kg di materiale riciclato genera SRB Token registrati su blockchain</p>
+                </div>
+                
+                <div class="token-card p-6">
+                    <img src="assets/icon-wallet.webp" alt="Wallet Integrato" class="w-20 mb-4">
+                    <h3 class="text-xl font-bold mb-2">Portafoglio Verde</h3>
+                    <p>Converti i tuoi token in crypto o crediti per servizi eco-friendly</p>
+                </div>
+                
+                <div class="token-card p-6">
+                    <img src="assets/icon-nft.webp" alt="NFT Ecologici" class="w-20 mb-4">
+                    <h3 class="text-xl font-bold mb-2">NFT Ambientali</h3>
+                    <p>Ottieni NFT esclusivi per i tuoi contributi ecologici</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 SynergyRecycle.B. Tutti i diritti riservati.</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <!-- Web3 Script -->
+    <script>
+        // Connessione Wallet
+        document.getElementById('connectWallet').addEventListener('click', async () => {
+            if (typeof window.ethereum !== 'undefined') {
+                try {
+                    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                    alert(`Wallet connesso: ${accounts[0].slice(0,6)}...${accounts[0].slice(-4)}`);
+                } catch (error) {
+                    console.error("Errore connessione:", error);
+                }
+            } else {
+                alert("Installa MetaMask per accedere alle funzionalità Web3!");
+            }
+        });
+    </script>
 </body>
 </html>
-<!-- Esempio per la card ICO -->
-<div class="card">
-    <h3>ICO</h3>
-    <p>Indirizzi per i pagamenti:</p>
-    <ul>
-        <li>BTC: <code>bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</code></li>
-        <li>TON: <code>EQABCD1234...</code></li>
-    </ul>
-</div>
