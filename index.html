@@ -1,84 +1,143 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it,en,de,cn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SynergyRecycle.B</title>
+    <title>SynergyRecycle.B - Rivoluzioniamo il Riciclo</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>SynergyRecycle.B</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Servizi</a></li>
-                <li><a href="#support">Sostenerci</a></li>
-                <li><a href="#contact">Contattaci</a></li>
-            </ul>
+    <!-- Header con stile blockchain -->
+    <header class="header-blockchain">
+        <nav class="container flex justify-between items-center">
+            <div class="logo">
+                <img src="assets/logo-srb.webp" alt="SynergyRecycle.B Logo" width="180">
+            </div>
+            <button id="connectWallet" class="w3-button">
+                🔗 Connetti Wallet
+            </button>
         </nav>
     </header>
-    
-    <section id="home" class="hero">
-        <h2>La nuova piattaforma per aiutarci, ad aiutare il Mondo.</h2>
-        <p>Costruiamo esperienze digitali, rivoluzioniamo il modo di fare, distinguiamoci.</p>
-        <button onclick="location.href='#services'">Inizia ora</button>
-    </section>
-    
-    <section id="strategy">
-        <h2>La migliore Strategia per sincronizzare i nostri guadagni</h2>
-        <p>Mettiamo a punto un'esperienza clienti unica, su misura basata su strategie digitali e ricerche.</p>
-    </section>
-    
-    <section id="values">
-        <h2>I nostri pilastri fondamentali</h2>
-        <div class="values-grid">
-            <div class="card">Efficienza</div>
-            <div class="card">Affidabilità</div>
-            <div class="card">Innovazione</div>
-            <div class="card">Stabilità</div>
+
+    <!-- Sezione Hero con animazioni -->
+    <section id="home" class="hero-section">
+        <div class="blockchain-grid"></div>
+        <div class="container hero-content text-center">
+            <h1>La nuova piattaforma per aiutarci, ad aiutare il Mondo</h1>
+            <p class="text-xl">Costruiamo esperienze digitali, rivoluzioniamo il modo di fare, distinguiamoci</p>
+            <a href="#services" class="w3-button mt-4">Inizia ora</a>
         </div>
     </section>
-    
-    <section id="services">
-        <h2>Scopri cosa possiamo offrirti</h2>
-        <div class="services-container">
-            <div class="service">
-                <h3>Trasformazione Digitale</h3>
-                <p>Aiutiamo le persone a prosperare in un panorama in evoluzione.</p>
-            </div>
-            <div class="service">
-                <h3>Web e sviluppo app</h3>
-                <p>Esperienza accumulata per la crescita e la nostra App.</p>
-                <button>Scarica la nostra App</button>
+
+    <!-- Sezione Strategia -->
+    <section id="strategy" class="py-16 bg-grigio-chiaro">
+        <div class="container eco-card">
+            <h2>La migliore Strategia per sincronizzare i nostri guadagni</h2>
+            <p>Mettiamo a punto un'esperienza clienti unica, su misura basata su strategie digitali e ricerche</p>
+            <img src="assets/strategy-icon.webp" alt="Strategia" class="w-32 mt-6">
+        </div>
+    </section>
+
+    <!-- Sezione Valori -->
+    <section id="values" class="py-16">
+        <div class="container">
+            <h2>I nostri pilastri fondamentali</h2>
+            <div class="values-grid">
+                <div class="eco-card">
+                    <img src="assets/efficiency.webp" alt="Efficienza" class="w-20">
+                    <h3>Efficienza</h3>
+                </div>
+                <!-- Ripeti per altre 3 card -->
             </div>
         </div>
     </section>
-    
-    <section id="team">
-        <h2>Incontra il nostro team</h2>
-        <div class="team-container">
-            <div class="team-member">
-                <img src="team-member.jpg" alt="Nome Cognome">
-                <h3>Nome Cognome</h3>
-                <p>Ruolo aziendale</p>
+
+    <!-- Sezione Servizi -->
+    <section id="services" class="py-16 bg-grigio-chiaro">
+        <div class="container">
+            <h2>Scopri cosa possiamo offrirti</h2>
+            <div class="services-container grid md:grid-cols-2 gap-8">
+                <div class="eco-card">
+                    <h3>Trasformazione Digitale</h3>
+                    <p>Aiutiamo tutte le persone a prosperare in un panorama in continua evoluzione</p>
+                </div>
+                <div class="eco-card">
+                    <h3>Web e sviluppo app</h3>
+                    <p>Esperienza accumulata per la crescita e la nostra App</p>
+                    <button class="w3-button mt-4">Scarica la nostra App</button>
+                </div>
             </div>
         </div>
     </section>
-    
-    <section id="references">
-        <h2>Trusted references</h2>
-        <p>Siamo in ottima compagnia.</p>
+
+    <!-- Sezione Team -->
+    <section id="team" class="py-16">
+        <div class="container">
+            <h2>Incontra il nostro team</h2>
+            <div class="team-container values-grid">
+                <div class="eco-card text-center">
+                    <img src="assets/team/member1.webp" alt="Team Member" class="rounded-full w-32 h-32 object-cover mx-auto">
+                    <h3>Nome Cognome</h3>
+                    <p class="text-crypto-cyan">CEO & Founder</p>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <section id="call-to-action">
-        <h2>Più di 50.000 Persone hanno fatto molto per se stessi, ma non tanto per il Mondo.</h2>
-        <p>Unisciti a noi per migliorare il nostro Pianeta.</p>
-        <button>Inizia ora</button>
+
+    <!-- Call to Action -->
+    <section id="call-to-action" class="py-16 bg-blockchain-blue text-white">
+        <div class="container text-center">
+            <h2>Più di 50.000 Persone hanno fatto molto per se stessi</h2>
+            <p>Unisciti a noi per migliorare il nostro Pianeta</p>
+            <a href="#contact" class="w3-button mt-4">Inizia ora</a>
+        </div>
     </section>
-    
-    <footer>
-        <p>&copy; 2025 SynergyRecycle.B - Tutti i diritti riservati</p>
+
+    <!-- Footer -->
+    <footer class="bg-carbon-black text-white py-8">
+        <div class="container grid md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="font-bold mb-4">Contatti</h4>
+                <p>© 2024 SynergyRecycle.B</p>
+                <p>Email: SynergyRecycle.b@gmail.com</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Link Utili</h4>
+                <ul class="space-y-2">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Servizi</a></li>
+                    <li><a href="#support">Sostenerci</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Social</h4>
+                <div class="flex space-x-4">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Script Web3 -->
+    <script>
+        // Script per la connessione del wallet
+        document.getElementById('connectWallet').addEventListener('click', async () => {
+            if (typeof window.ethereum !== 'undefined') {
+                try {
+                    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                    alert(`Wallet connesso: ${accounts[0].slice(0,6)}...${accounts[0].slice(-4)}`);
+                } catch (error) {
+                    console.error("Errore connessione:", error);
+                }
+            } else {
+                alert("Installa MetaMask per utilizzare questa funzionalità!");
+            }
+        });
+    </script>
 </body>
 </html>
+<footer>
+    <!-- Footer -->
+        <p>&copy; 2025 SynergyRecycle.B - Tutti i diritti riservati</p>
