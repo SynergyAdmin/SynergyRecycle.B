@@ -1,185 +1,109 @@
-/* styles.css */
-:root {
-  /* Palette Eco-Tech */
-  --eco-green: #2ECC71;         /* Verde energia rinnovabile */
-  --deep-forest: #27AE60;       /* Verde scuro per profondità */
-  --blockchain-blue: #2980B9;   /* Blu fiducia tecnologica */
-  --crypto-cyan: #1ABC9C;       /* Turchese per elementi blockchain */
-  --carbon-black: #2C3E50;      /* Testo principale */
-  --pure-white: #FFFFFF;        /* Sfondi e spazi puliti */
-  --eco-gold: #F1C40F;          /* Accenti premium */
-}
+/* ==========================
+   🌍 SynergyRecycle.B - Stile ottimizzato
+   ========================== */
 
-/* Reset Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', system-ui;
+:root {
+  --primary-green: #27ae60;
+  --secondary-blue: #2980b9;
+  --light-gray: #f2f2f2;
+  --dark-gray: #2c3e50;
+  --white: #ffffff;
+  --black: #000000;
 }
 
 body {
-  line-height: 1.6;
-  color: var(--carbon-black);
-  background: var(--pure-white);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
 }
 
-/* Header Ibrido */
-.header-blockchain {
-  background: linear-gradient(
-    135deg, 
-    var(--deep-forest) 0%, 
-    var(--blockchain-blue) 100%
-  );
-  padding: 1rem 2rem;
-  box-shadow: 0 4px 20px rgba(39, 174, 96, 0.15);
-  position: relative;
-  overflow: hidden;
+/* ==========================
+   Header
+   ========================== */
+.header {
+  background: linear-gradient(135deg, var(--primary-green), var(--secondary-blue));
+  color: var(--white);
+  text-align: center;
+  padding: 40px 20px;
 }
 
-.header-blockchain::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    rgba(255,255,255,0.1) 10px,
-    rgba(255,255,255,0.1) 20px
-  );
-  pointer-events: none;
+.header h1 {
+  font-size: 3rem;
+  font-style: italic;
+  margin: 0;
 }
 
-/* Sezione Hero */
+/* ==========================
+   Hero Section
+   ========================== */
 .hero-section {
-  background: linear-gradient(
-      rgba(39, 174, 96, 0.9), 
-      rgba(41, 128, 185, 0.9)
-    ),
-    url('assets/earth-network.webp') center/cover;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  position: relative;
+  background: url('assets/earth-network.webp') center/cover no-repeat;
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--white);
 }
 
-.blockchain-grid {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(var(--carbon-black) 1px, transparent 1px),
-    linear-gradient(90deg, var(--carbon-black) 1px, transparent 1px);
-  background-size: 40px 40px;
-  opacity: 0.15;
-  z-index: 1;
+.hero-section h2 {
+  font-size: 2.5rem;
+  font-style: italic;
 }
 
-/* Card Ibrida */
-.eco-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 15px;
-  padding: 2rem;
-  margin: 1rem;
-  box-shadow: 0 8px 32px rgba(46, 204, 113, 0.1);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.eco-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(46, 204, 113, 0.2);
-}
-
-.eco-card::before {
-  content: '';
-  position: absolute;
-  bottom: -50%;
-  right: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent 25%,
-    var(--crypto-cyan) 50%,
-    transparent 75%
-  );
-  opacity: 0.1;
-  animation: blockchain-flow 20s linear infinite;
-}
-
-@keyframes blockchain-flow {
-  0% { transform: translateX(-50%) rotate(45deg); }
-  100% { transform: translateX(50%) rotate(45deg); }
-}
-
-/* Bottoni Web3 */
-.w3-button {
-  background: linear-gradient(
-    to right, 
-    var(--deep-forest), 
-    var(--blockchain-blue)
-  );
-  border: none;
-  padding: 12px 30px;
-  color: var(--pure-white);
-  border-radius: 30px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.w3-button::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    rgba(255,255,255,0.2),
-    transparent
-  );
-  transform: rotate(45deg);
-  animation: button-glow 3s infinite;
-}
-
-@keyframes button-glow {
-  0% { left: -50%; }
-  100% { left: 150%; }
-}
-
-/* Responsive Grid */
+/* ==========================
+   Grid Layout
+   ========================== */
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px;
 }
 
-/* Mobile Optimization */
+.card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+/* ==========================
+   Pulsanti Web3
+   ========================== */
+.w3-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--secondary-blue);
+  color: var(--white);
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.w3-button:hover {
+  background: var(--primary-green);
+}
+
+/* ==========================
+   Responsive Design
+   ========================== */
 @media (max-width: 768px) {
-  .header-blockchain {
-    padding: 1rem;
+  .header h1 {
+    font-size: 2.5rem;
   }
-  
-  .hero-section {
-    min-height: 60vh;
+  .hero-section h2 {
+    font-size: 2rem;
   }
-  
-  .w3-button {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+  .values-grid {
+    grid-template-columns: 1fr;
   }
 }
