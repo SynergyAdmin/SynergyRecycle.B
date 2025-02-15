@@ -5,10 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sostenerci-ti - Eco-Platform</title>
     <style>
-        /* Stili base ereditati */
-        /* [Stili di base precedenti rimangono invariati] */
+        :root {
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --container-width: 1200px;
+        }
 
-        /* Stili specifici per le card dei prezzi */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .navbar {
+            padding: 1rem 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        main {
+            margin-top: 80px;
+        }
+
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -34,7 +67,6 @@
             height: 8px;
             background: #eee;
             border-radius: 4px;
-            margin: var(--spacing-sm) 0;
             overflow: hidden;
         }
 
@@ -62,28 +94,11 @@
             color: #856404;
             padding: var(--spacing-md);
             border-radius: 8px;
-            margin-top: var(--spacing-lg);
             text-align: center;
-        }
-
-        .instant-setup {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--spacing-md);
-            margin-top: var(--spacing-lg);
-        }
-
-        .setup-card {
-            background: white;
-            padding: var(--spacing-md);
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
-    <!-- Navigation (uguale alle altre pagine) -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">Eco-Platform</a>
@@ -102,20 +117,16 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main style="margin-top: 80px;">
-        <!-- Hero Section -->
+    <main>
         <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Scegli il tuo Eco-sistema che si adatta alle tue esigenze.</h1>
             </div>
         </section>
 
-        <!-- Pricing Cards -->
         <section class="section">
             <div class="container">
                 <div class="pricing-grid">
-                    <!-- Pre/Sale Card -->
                     <div class="pricing-card">
                         <h2>Pre/Sale</h2>
                         <p>Un'opportunità esclusiva</p>
@@ -126,7 +137,6 @@
                         <a href="#" class="btn">Inizia ora</a>
                     </div>
 
-                    <!-- ICO Card -->
                     <div class="pricing-card">
                         <h2>ICO</h2>
                         <p>Potrai usare tutti i Metodi che vuoi per poter entrare a far parte del nostro progetto!</p>
@@ -139,23 +149,10 @@
                         </div>
                         <a href="mailto:contact@example.com" class="btn">Inviaci una Mail</a>
                     </div>
-
-                    <!-- Launch Card -->
-                    <div class="pricing-card">
-                        <h2>Launch</h2>
-                        <p>Sei pronto a fare la differenza?</p>
-                        <ul style="text-align: left; margin: var(--spacing-md) 0;">
-                            <li>Listing su Dex-Cex</li>
-                            <li>Scambio su App</li>
-                            <li>Carta Virtuale o Fisica</li>
-                        </ul>
-                        <a href="#" class="btn">Contattaci</a>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Security Notice -->
         <section class="section">
             <div class="container">
                 <div class="security-notice">
@@ -164,45 +161,10 @@
                 </div>
             </div>
         </section>
-
-        <!-- Instant Setup -->
-        <section class="section">
-            <div class="container">
-                <div class="instant-setup">
-                    <div class="setup-card">
-                        <h3>Abbiamo quasi terminato!</h3>
-                        <div class="progress-bar">
-                            <div class="progress-bar-fill" style="width: 80%"></div>
-                        </div>
-                        <p>80% completato</p>
-                    </div>
-                    <div class="setup-card">
-                        <h3>Instant setup</h3>
-                        <p>Setup immediato e intuitivo</p>
-                    </div>
-                    <div class="setup-card">
-                        <h3>Satisfied or reimbursed</h3>
-                        <p>Garanzia di soddisfazione</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="section" style="background-color: #f8f9fa;">
-            <div class="container">
-                <h2 class="section-title">Più di 50.000 Persone hanno fatto molto per se stessi, ma non tanto per il Mondo.</h2>
-                <p class="text-center">Unisciti a noi per migliorare il nostro Pianeta.</p>
-                <div style="text-align: center; margin-top: var(--spacing-md);">
-                    <a href="#" class="btn">Inizia ora</a>
-                </div>
-            </div>
-        </section>
     </main>
 
     <script>
         function changeLanguage(lang) {
-            // Qui andrà la logica per il cambio lingua
             console.log('Cambio lingua a:', lang);
         }
     </script>
