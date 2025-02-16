@@ -11,7 +11,19 @@ document.getElementById('connectWallet').addEventListener('click', async () => {
         alert("Installa MetaMask per utilizzare questa funzionalità!");
     }
 });
-// script.js
+
+// Caricamento dinamico della navbar
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            const navbarContainer = document.createElement("div");
+            navbarContainer.innerHTML = data;
+            document.body.insertBefore(navbarContainer, document.body.firstChild);
+        })
+        .catch(error => console.error("Errore nel caricamento della navbar:", error));
+});
+
 // Configurazione multilingua
 const translations = {
     it: {
