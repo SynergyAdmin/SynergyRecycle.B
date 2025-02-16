@@ -182,3 +182,45 @@ body {
     font-size: 0.9rem;
   }
 }
+
+/* style.css */
+/* ... altri stili esistenti ... */
+
+/* TABS STYLES */
+.tabs-container {
+    margin: 20px;
+}
+
+.tabs-buttons {
+    margin-bottom: 10px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    animation: fadeIn 0.5s;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
