@@ -34,7 +34,7 @@ const translations = {
         heroTitle: "The new platform to help us, help the World.",
         startNow: "Start now"
     }
-    // Aggiungi altre lingue...
+    
 };
 
 // Gestione cambio lingua
