@@ -130,6 +130,23 @@ function initUI() {
     });
 }
 
+function initUI() {
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', function() {
+            const tabId = this.dataset.tab;
+            
+            // Rimuovi classe attiva
+            document.querySelectorAll('.tab-button, .tab-content').forEach(element => {
+                element.classList.remove('active');
+            });
+            
+            // Aggiungi classe attiva
+            this.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+}
+
 // Listener globali
 document.addEventListener('DOMContentLoaded', () => {
     // Inizializzazione componenti
